@@ -23,6 +23,8 @@ class Solution:
         return sSort == tSort
     
     """
+    s is the anagram of t means they have same number of same character but the order of characters can be different
+    
     1. sort two strings first 
     2. then compare
     """
