@@ -42,4 +42,5 @@ class Solution(object):
     """
     determine whether there is a cycle in linked list
     two pointers, one fast one slow
+    if there is cycle, the fast pointer must can catch slow pointer 
     """
