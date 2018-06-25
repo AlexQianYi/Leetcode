@@ -24,4 +24,3 @@ class Solution(object):
             else:
                 result.append(str(i))
         return result
-    
