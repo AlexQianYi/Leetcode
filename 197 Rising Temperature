@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jun 26 09:44:20 2018
+
+@author: yiqian
+"""
+
+# Write your MySQL query statement below
+
+select w2.Id
+from Weather w1, Weather w2
+where w1.Temperature < w2.Temperature and
+    TO_DAYS(w2.RecordDate) - TO_DAYS(w1.RecordDate) = 1
+    
+    
+    
+    """
+    find the day that higher than yesterday
+    """
