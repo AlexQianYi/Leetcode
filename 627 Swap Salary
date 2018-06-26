@@ -1,0 +1,15 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jun 26 10:03:52 2018
+
+@author: yiqian
+"""
+
+# Write your MySQL query statement below
+update salary set sex= case when sex="m" then "f"
+                   when sex="f" then "m" end
+                   
+"""
+change f and m 
+"""
