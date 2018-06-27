@@ -1,12 +1,12 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Thu May 24 11:20:17 2018
+Created on Wed Jun 27 09:25:17 2018
 
 @author: yiqian
 """
 
-class Solution:
+class Solution(object):
     def isAnagram(self, s, t):
         """
         :type s: str
@@ -14,17 +14,41 @@ class Solution:
         :rtype: bool
         """
         
-        if not (len(s)==len(t)):
+        if len(s)!=len(t):
             return False
         
-        sSort = sorted(s)
-        tSort = sorted(t)
+        dic = {}
+        for i in xrange(len(s)):
+            if s[i] in dic:
+                dic[s[i]] += 1
+            else:
+                dic[s[i]] = 1
+                
+        for i in xrange(len(t)):
+            if t[i] not in dic:
+                return False
+            elif dic[t[i]] == 0:
+                return False
+            else:
+                dic[t[i]] -= 1
+        return True
         
-        return sSort == tSort
-    
-    """
-    s is the anagram of t means they have same number of same character but the order of characters can be different
-    
-    1. sort two strings first 
-    2. then compare
-    """
+        
+        """
+        sset=set(s)
+        tset=set(t)
+        
+        if len(sset)!=len(tset):
+            return False
+        
+        for i in sset:
+            if s.count(i)!=t.count(i):
+                return False
+        return True
+        
+        use count is more efficient 
+        
+        """
+        
+        
+        
