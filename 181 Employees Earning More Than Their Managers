@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Jun 28 16:42:06 2018
+
+@author: yiqian
+"""
+
+# Write your MySQL query statement below
+Select E1.Name as Employee
+from Employee E1, Employee E2
+where E1.ManagerId = E2.Id and E1.Salary > E2.Salary
