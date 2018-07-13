@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jul 13 16:27:40 2018
+
+@author: yiqian
+"""
+
+# Write your MySQL query statement below
+select distinct e1.Email
+from Person e1, Person e2
+where e1.Id != e2.Id and e1.Email = e2.Email
