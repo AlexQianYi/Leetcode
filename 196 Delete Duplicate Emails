@@ -1,0 +1,12 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jul 25 23:02:50 2018
+
+@author: yiqian
+"""
+
+# Write your MySQL query statement below
+delete e2
+from Person e1, Person e2
+where e1.Id<e2.Id and e1.Email = e2.Email
