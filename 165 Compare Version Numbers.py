@@ -32,3 +32,8 @@ class Solution(object):
                 if int(l1[i]) != 0:
                     return 1
             return 0
+        
+        
+        """
+        beats 100%
+        """
